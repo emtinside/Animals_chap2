@@ -5,5 +5,12 @@ public class Human extends Mammal {
 		super(name, age, xPosition, yPosition, img);
 		// TODO Auto-generated constructor stub
 	}
+	
+	public void introduceYourself() {
+		//Write code to print the person's name and age to console
+		//Ask the question "How are you?" to the console, and expect an answer back in the console.
+		//Respond to the user's answer
+	
+	}
 
 }

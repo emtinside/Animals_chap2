@@ -7,9 +7,10 @@ public class DrawingSurface extends PApplet{
 	Cat cat;
 	Human human;
 	
+	//Uncomment lines in this constructor to add your animals to the screen
+	
 	/** Creates a DrawingSurface **/
 	public DrawingSurface() {
-		//Uncomment lines in this constructor to add your animals to the screen
 		mammal = new Mammal("Unknown", 1000, 100, 50, "mammal.png");
 		cat = new Cat("Fluffy", 5, 100, 100, "Domestic_Cat.png");
 		human = new Human("Susan", 49, 100, 200, "woman.png");
@@ -50,6 +51,18 @@ public class DrawingSurface extends PApplet{
 			mammal.jump(20);
 //			cat.jump();
 //			human.jump();
+		}
+	}
+	
+	public void mousePressed() {
+		if(mammal.clicked(this.mouseX, this.mouseY)) {
+			System.out.println("Aha!");
+		}
+		else if(cat.clicked(this.mouseX, this.mouseY)) {
+			//Write code here
+		}
+		else if(human.clicked(this.mouseX, this.mouseY)){
+			//Write code here
 		}
 	}
 	

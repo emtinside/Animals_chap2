@@ -19,7 +19,7 @@ public class Mammal {
 		this.GROUND_LEVEL = yPosition;
 		this.yVelocity = 0;
 	}
-	
+//**************************************************************	
 	//Actions
 	public void jump(int jumpVelocity) {
 		yVelocity += jumpVelocity;
@@ -57,6 +57,7 @@ public class Mammal {
 		p.image(p.loadImage(img), xPosition, yPosition);
 	}
 	
+//**************************************************************	
 	//Get Methods
 	public int getAge() {
 		return age;
@@ -80,6 +81,7 @@ public class Mammal {
 		return yVelocity;
 	}
 	
+//**************************************************************	
 	//Set Methods
 	public void setX(float x) {
 		xPosition = x;
@@ -88,6 +90,7 @@ public class Mammal {
 		yPosition = y;
 	}
 	
+//**************************************************************
 	//Other
 	public boolean isOnGround() {
 		if (yPosition == GROUND_LEVEL)
@@ -97,6 +100,13 @@ public class Mammal {
 	
 	public void ageUp() {
 		age++;
+	}
+	
+	public boolean clicked(float mouseX, float mouseY) {
+		if(mouseY >= yPosition && mouseY <= yPosition + 100 && mouseX >= xPosition && mouseX <= xPosition+50){
+			return true;
+		}
+		return false;
 	}
 	
 }
